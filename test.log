@@ -1,0 +1,786 @@
+##################
+# Add needed key #
+##################
+deb http://downloads-distro.mongodb.org/repo/debian-sysvinit dist 10gen
+Reading package lists...
+Building dependency tree...
+Reading state information...
+git is already the newest version.
+0 upgraded, 0 newly installed, 0 to remove and 4 not upgraded.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+mongodb-org is already the newest version.
+0 upgraded, 0 newly installed, 0 to remove and 4 not upgraded.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+curl is already the newest version.
+0 upgraded, 0 newly installed, 0 to remove and 4 not upgraded.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+python-dev is already the newest version.
+0 upgraded, 0 newly installed, 0 to remove and 4 not upgraded.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+libxml2-dev is already the newest version.
+0 upgraded, 0 newly installed, 0 to remove and 4 not upgraded.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+vim is already the newest version.
+0 upgraded, 0 newly installed, 0 to remove and 4 not upgraded.
+
+## Confirming "wheezy" is supported...
+
++ curl -sLf -o /dev/null 'https://deb.nodesource.com/node/dists/wheezy/Release'
+
+## Adding the NodeSource signing key to your keyring...
+
++ curl -s https://deb.nodesource.com/gpgkey/nodesource.gpg.key | apt-key add -
+OK
+
+## Creating apt sources list file for the NodeSource repo...
+
++ echo 'deb https://deb.nodesource.com/node wheezy main' > /etc/apt/sources.list.d/nodesource.list
++ echo 'deb-src https://deb.nodesource.com/node wheezy main' >> /etc/apt/sources.list.d/nodesource.list
+
+## Running `apt-get update` for you...
+
++ apt-get update
+Hit http://downloads-distro.mongodb.org dist Release.gpg
+Hit http://security.debian.org wheezy/updates Release.gpg
+Hit http://ftp.us.debian.org wheezy Release.gpg
+Hit http://ftp.us.debian.org wheezy-updates Release.gpg
+Hit http://security.debian.org wheezy/updates Release
+Hit http://downloads-distro.mongodb.org dist Release
+Hit http://ftp.us.debian.org wheezy Release
+Hit http://security.debian.org wheezy/updates/main Sources
+Hit http://ftp.us.debian.org wheezy-updates Release
+Hit http://downloads-distro.mongodb.org dist/10gen amd64 Packages
+Hit http://security.debian.org wheezy/updates/main amd64 Packages
+Hit http://ftp.us.debian.org wheezy/main Sources
+Hit http://security.debian.org wheezy/updates/main Translation-en
+Hit http://ftp.us.debian.org wheezy/main amd64 Packages
+Hit http://ftp.us.debian.org wheezy/main Translation-en
+Hit http://ftp.us.debian.org wheezy-updates/main Sources
+Hit http://ftp.us.debian.org wheezy-updates/main amd64 Packages/DiffIndex
+Hit http://ftp.us.debian.org wheezy-updates/main Translation-en/DiffIndex
+Hit https://deb.nodesource.com wheezy Release.gpg
+Hit https://deb.nodesource.com wheezy Release
+Hit https://deb.nodesource.com wheezy/main Sources
+Hit https://deb.nodesource.com wheezy/main amd64 Packages
+Ign http://downloads-distro.mongodb.org dist/10gen Translation-en_US
+Ign http://downloads-distro.mongodb.org dist/10gen Translation-en
+Ign https://deb.nodesource.com wheezy/main Translation-en_US
+Ign https://deb.nodesource.com wheezy/main Translation-en
+Reading package lists...
+
+## Run `apt-get install nodejs` (as root) to install Node.js and npm
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+python-pip is already the newest version.
+openjdk-7-jre-headless is already the newest version.
+nodejs is already the newest version.
+0 upgraded, 0 newly installed, 0 to remove and 4 not upgraded.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+tomcat7 is already the newest version.
+tomcat7-admin is already the newest version.
+0 upgraded, 0 newly installed, 0 to remove and 4 not upgraded.
+#########################
+#        Back up        #
+#    Tomcat-users.xml   #
+#########################
+
+#########################
+#      Copy Basic       #
+#   Tomcat Users File   #
+#########################
+
+#########################
+# Copy libraries needed #
+#########################
+
+#########################
+#     Copy solr.war     #
+#########################
+
+#########################
+#     Copy support      #
+#        files          #
+#########################
+
+#########################
+#      Install xlml     #
+#########################
+
+Downloading/unpacking xlml
+  Could not find any downloads that satisfy the requirement xlml
+No distributions at all found for xlml
+Storing complete log in /root/.pip/pip.log
+
+Stopping Tomcat servlet engine: tomcat7.
+Starting Tomcat servlet engine: tomcat7.
+Cloning into 'mongo-connector'...
+running install
+Checking .pth file support in /usr/local/lib/python2.7/dist-packages/
+/usr/bin/python -E -c pass
+TEST PASSED: /usr/local/lib/python2.7/dist-packages/ appears to support .pth files
+running bdist_egg
+running egg_info
+creating mongo_connector.egg-info
+writing requirements to mongo_connector.egg-info/requires.txt
+writing mongo_connector.egg-info/PKG-INFO
+writing top-level names to mongo_connector.egg-info/top_level.txt
+writing dependency_links to mongo_connector.egg-info/dependency_links.txt
+writing entry points to mongo_connector.egg-info/entry_points.txt
+writing manifest file 'mongo_connector.egg-info/SOURCES.txt'
+reading manifest file 'mongo_connector.egg-info/SOURCES.txt'
+writing manifest file 'mongo_connector.egg-info/SOURCES.txt'
+installing library code to build/bdist.linux-x86_64/egg
+running install_lib
+running build_py
+creating build
+creating build/lib.linux-x86_64-2.7
+creating build/lib.linux-x86_64-2.7/mongo_connector
+copying mongo_connector/locking_dict.py -> build/lib.linux-x86_64-2.7/mongo_connector
+copying mongo_connector/compat.py -> build/lib.linux-x86_64-2.7/mongo_connector
+copying mongo_connector/errors.py -> build/lib.linux-x86_64-2.7/mongo_connector
+copying mongo_connector/__init__.py -> build/lib.linux-x86_64-2.7/mongo_connector
+copying mongo_connector/connector.py -> build/lib.linux-x86_64-2.7/mongo_connector
+copying mongo_connector/constants.py -> build/lib.linux-x86_64-2.7/mongo_connector
+copying mongo_connector/oplog_manager.py -> build/lib.linux-x86_64-2.7/mongo_connector
+copying mongo_connector/util.py -> build/lib.linux-x86_64-2.7/mongo_connector
+creating build/lib.linux-x86_64-2.7/mongo_connector/doc_managers
+copying mongo_connector/doc_managers/doc_manager_simulator.py -> build/lib.linux-x86_64-2.7/mongo_connector/doc_managers
+copying mongo_connector/doc_managers/formatters.py -> build/lib.linux-x86_64-2.7/mongo_connector/doc_managers
+copying mongo_connector/doc_managers/solr_doc_manager.py -> build/lib.linux-x86_64-2.7/mongo_connector/doc_managers
+copying mongo_connector/doc_managers/mongo_doc_manager.py -> build/lib.linux-x86_64-2.7/mongo_connector/doc_managers
+copying mongo_connector/doc_managers/__init__.py -> build/lib.linux-x86_64-2.7/mongo_connector/doc_managers
+copying mongo_connector/doc_managers/elastic_doc_manager.py -> build/lib.linux-x86_64-2.7/mongo_connector/doc_managers
+copying mongo_connector/doc_managers/schema.xml -> build/lib.linux-x86_64-2.7/mongo_connector/doc_managers
+creating build/bdist.linux-x86_64
+creating build/bdist.linux-x86_64/egg
+creating build/bdist.linux-x86_64/egg/mongo_connector
+copying build/lib.linux-x86_64-2.7/mongo_connector/locking_dict.py -> build/bdist.linux-x86_64/egg/mongo_connector
+creating build/bdist.linux-x86_64/egg/mongo_connector/doc_managers
+copying build/lib.linux-x86_64-2.7/mongo_connector/doc_managers/doc_manager_simulator.py -> build/bdist.linux-x86_64/egg/mongo_connector/doc_managers
+copying build/lib.linux-x86_64-2.7/mongo_connector/doc_managers/formatters.py -> build/bdist.linux-x86_64/egg/mongo_connector/doc_managers
+copying build/lib.linux-x86_64-2.7/mongo_connector/doc_managers/solr_doc_manager.py -> build/bdist.linux-x86_64/egg/mongo_connector/doc_managers
+copying build/lib.linux-x86_64-2.7/mongo_connector/doc_managers/schema.xml -> build/bdist.linux-x86_64/egg/mongo_connector/doc_managers
+copying build/lib.linux-x86_64-2.7/mongo_connector/doc_managers/mongo_doc_manager.py -> build/bdist.linux-x86_64/egg/mongo_connector/doc_managers
+copying build/lib.linux-x86_64-2.7/mongo_connector/doc_managers/__init__.py -> build/bdist.linux-x86_64/egg/mongo_connector/doc_managers
+copying build/lib.linux-x86_64-2.7/mongo_connector/doc_managers/elastic_doc_manager.py -> build/bdist.linux-x86_64/egg/mongo_connector/doc_managers
+copying build/lib.linux-x86_64-2.7/mongo_connector/compat.py -> build/bdist.linux-x86_64/egg/mongo_connector
+copying build/lib.linux-x86_64-2.7/mongo_connector/errors.py -> build/bdist.linux-x86_64/egg/mongo_connector
+copying build/lib.linux-x86_64-2.7/mongo_connector/__init__.py -> build/bdist.linux-x86_64/egg/mongo_connector
+copying build/lib.linux-x86_64-2.7/mongo_connector/connector.py -> build/bdist.linux-x86_64/egg/mongo_connector
+copying build/lib.linux-x86_64-2.7/mongo_connector/constants.py -> build/bdist.linux-x86_64/egg/mongo_connector
+copying build/lib.linux-x86_64-2.7/mongo_connector/oplog_manager.py -> build/bdist.linux-x86_64/egg/mongo_connector
+copying build/lib.linux-x86_64-2.7/mongo_connector/util.py -> build/bdist.linux-x86_64/egg/mongo_connector
+byte-compiling build/bdist.linux-x86_64/egg/mongo_connector/locking_dict.py to locking_dict.pyc
+byte-compiling build/bdist.linux-x86_64/egg/mongo_connector/doc_managers/doc_manager_simulator.py to doc_manager_simulator.pyc
+byte-compiling build/bdist.linux-x86_64/egg/mongo_connector/doc_managers/formatters.py to formatters.pyc
+byte-compiling build/bdist.linux-x86_64/egg/mongo_connector/doc_managers/solr_doc_manager.py to solr_doc_manager.pyc
+byte-compiling build/bdist.linux-x86_64/egg/mongo_connector/doc_managers/mongo_doc_manager.py to mongo_doc_manager.pyc
+byte-compiling build/bdist.linux-x86_64/egg/mongo_connector/doc_managers/__init__.py to __init__.pyc
+byte-compiling build/bdist.linux-x86_64/egg/mongo_connector/doc_managers/elastic_doc_manager.py to elastic_doc_manager.pyc
+byte-compiling build/bdist.linux-x86_64/egg/mongo_connector/compat.py to compat.pyc
+byte-compiling build/bdist.linux-x86_64/egg/mongo_connector/errors.py to errors.pyc
+byte-compiling build/bdist.linux-x86_64/egg/mongo_connector/__init__.py to __init__.pyc
+byte-compiling build/bdist.linux-x86_64/egg/mongo_connector/connector.py to connector.pyc
+byte-compiling build/bdist.linux-x86_64/egg/mongo_connector/constants.py to constants.pyc
+byte-compiling build/bdist.linux-x86_64/egg/mongo_connector/oplog_manager.py to oplog_manager.pyc
+byte-compiling build/bdist.linux-x86_64/egg/mongo_connector/util.py to util.pyc
+creating build/bdist.linux-x86_64/egg/EGG-INFO
+copying mongo_connector.egg-info/PKG-INFO -> build/bdist.linux-x86_64/egg/EGG-INFO
+copying mongo_connector.egg-info/SOURCES.txt -> build/bdist.linux-x86_64/egg/EGG-INFO
+copying mongo_connector.egg-info/dependency_links.txt -> build/bdist.linux-x86_64/egg/EGG-INFO
+copying mongo_connector.egg-info/entry_points.txt -> build/bdist.linux-x86_64/egg/EGG-INFO
+copying mongo_connector.egg-info/requires.txt -> build/bdist.linux-x86_64/egg/EGG-INFO
+copying mongo_connector.egg-info/top_level.txt -> build/bdist.linux-x86_64/egg/EGG-INFO
+creating dist
+creating 'dist/mongo_connector-1.3.dev0-py2.7.egg' and adding 'build/bdist.linux-x86_64/egg' to it
+removing 'build/bdist.linux-x86_64/egg' (and everything under it)
+Processing mongo_connector-1.3.dev0-py2.7.egg
+removing '/usr/local/lib/python2.7/dist-packages/mongo_connector-1.3.dev0-py2.7.egg' (and everything under it)
+creating /usr/local/lib/python2.7/dist-packages/mongo_connector-1.3.dev0-py2.7.egg
+Extracting mongo_connector-1.3.dev0-py2.7.egg to /usr/local/lib/python2.7/dist-packages
+mongo-connector 1.3.dev0 is already the active version in easy-install.pth
+Installing mongo-connector script to /usr/local/bin
+
+Installed /usr/local/lib/python2.7/dist-packages/mongo_connector-1.3.dev0-py2.7.egg
+Processing dependencies for mongo-connector==1.3.dev0
+Searching for elasticsearch==1.2.0
+Best match: elasticsearch 1.2.0
+Processing elasticsearch-1.2.0-py2.7.egg
+elasticsearch 1.2.0 is already the active version in easy-install.pth
+
+Using /usr/local/lib/python2.7/dist-packages/elasticsearch-1.2.0-py2.7.egg
+Searching for pysolr==3.2.0
+Best match: pysolr 3.2.0
+Processing pysolr-3.2.0-py2.7.egg
+pysolr 3.2.0 is already the active version in easy-install.pth
+
+Using /usr/local/lib/python2.7/dist-packages/pysolr-3.2.0-py2.7.egg
+Searching for pymongo==2.7.2
+Best match: pymongo 2.7.2
+Processing pymongo-2.7.2-py2.7-linux-x86_64.egg
+pymongo 2.7.2 is already the active version in easy-install.pth
+
+Using /usr/local/lib/python2.7/dist-packages/pymongo-2.7.2-py2.7-linux-x86_64.egg
+Searching for urllib3==1.9
+Best match: urllib3 1.9
+Processing urllib3-1.9-py2.7.egg
+urllib3 1.9 is already the active version in easy-install.pth
+
+Using /usr/local/lib/python2.7/dist-packages/urllib3-1.9-py2.7.egg
+Searching for requests==2.4.0
+Best match: requests 2.4.0
+Processing requests-2.4.0-py2.7.egg
+requests 2.4.0 is already the active version in easy-install.pth
+
+Using /usr/local/lib/python2.7/dist-packages/requests-2.4.0-py2.7.egg
+Searching for certifi==14.05.14
+Best match: certifi 14.05.14
+Processing certifi-14.05.14-py2.7.egg
+certifi 14.05.14 is already the active version in easy-install.pth
+
+Using /usr/local/lib/python2.7/dist-packages/certifi-14.05.14-py2.7.egg
+Finished processing dependencies for mongo-connector==1.3.dev0
+#########################
+#      Cleaning up      #
+#########################
+express@4.8.7 /usr/lib/node_modules/express
+├── merge-descriptors@0.0.2
+├── utils-merge@1.0.0
+├── cookie@0.1.2
+├── escape-html@1.0.1
+├── cookie-signature@1.0.4
+├── finalhandler@0.1.0
+├── range-parser@1.0.0
+├── fresh@0.2.2
+├── vary@0.1.0
+├── media-typer@0.2.0
+├── methods@1.1.0
+├── parseurl@1.3.0
+├── serve-static@1.5.3
+├── buffer-crc32@0.2.3
+├── path-to-regexp@0.1.3
+├── depd@0.4.4
+├── qs@2.2.2
+├── debug@1.0.4 (ms@0.6.2)
+├── proxy-addr@1.0.1 (ipaddr.js@0.1.2)
+├── accepts@1.0.7 (negotiator@0.4.7, mime-types@1.0.2)
+├── send@0.8.3 (destroy@1.0.3, ms@0.6.2, mime@1.2.11, on-finished@2.1.0)
+└── type-is@1.3.2 (mime-types@1.0.2)
+/usr/bin/express -> /usr/lib/node_modules/express-generator/bin/express
+express-generator@4.8.0 /usr/lib/node_modules/express-generator
+├── commander@1.3.2 (keypress@0.1.0)
+└── mkdirp@0.5.0 (minimist@0.0.8)
+Requirement already satisfied (use --upgrade to upgrade): cssselect in /usr/local/lib/python2.7/dist-packages
+Cleaning up...
+########################
+#   Copying updated    #
+#    pysolr.py file    #
+########################
+##################
+# Add needed key #
+##################
+deb http://downloads-distro.mongodb.org/repo/debian-sysvinit dist 10gen
+Reading package lists...
+Building dependency tree...
+Reading state information...
+git is already the newest version.
+0 upgraded, 0 newly installed, 0 to remove and 4 not upgraded.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+mongodb-org is already the newest version.
+0 upgraded, 0 newly installed, 0 to remove and 4 not upgraded.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+curl is already the newest version.
+0 upgraded, 0 newly installed, 0 to remove and 4 not upgraded.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+python-dev is already the newest version.
+0 upgraded, 0 newly installed, 0 to remove and 4 not upgraded.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+libxml2-dev is already the newest version.
+0 upgraded, 0 newly installed, 0 to remove and 4 not upgraded.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+vim is already the newest version.
+0 upgraded, 0 newly installed, 0 to remove and 4 not upgraded.
+
+## Confirming "wheezy" is supported...
+
++ curl -sLf -o /dev/null 'https://deb.nodesource.com/node/dists/wheezy/Release'
+
+## Adding the NodeSource signing key to your keyring...
+
++ curl -s https://deb.nodesource.com/gpgkey/nodesource.gpg.key | apt-key add -
+OK
+
+## Creating apt sources list file for the NodeSource repo...
+
++ echo 'deb https://deb.nodesource.com/node wheezy main' > /etc/apt/sources.list.d/nodesource.list
++ echo 'deb-src https://deb.nodesource.com/node wheezy main' >> /etc/apt/sources.list.d/nodesource.list
+
+## Running `apt-get update` for you...
+
++ apt-get update
+Hit http://downloads-distro.mongodb.org dist Release.gpg
+Hit http://security.debian.org wheezy/updates Release.gpg
+Hit http://ftp.us.debian.org wheezy Release.gpg
+Hit http://security.debian.org wheezy/updates Release
+Hit http://ftp.us.debian.org wheezy-updates Release.gpg
+Hit http://downloads-distro.mongodb.org dist Release
+Hit http://ftp.us.debian.org wheezy Release
+Hit http://security.debian.org wheezy/updates/main Sources
+Hit http://downloads-distro.mongodb.org dist/10gen amd64 Packages
+Hit http://ftp.us.debian.org wheezy-updates Release
+Hit http://security.debian.org wheezy/updates/main amd64 Packages
+Hit http://ftp.us.debian.org wheezy/main Sources
+Hit http://security.debian.org wheezy/updates/main Translation-en
+Hit http://ftp.us.debian.org wheezy/main amd64 Packages
+Hit http://ftp.us.debian.org wheezy/main Translation-en
+Hit http://ftp.us.debian.org wheezy-updates/main Sources
+Hit http://ftp.us.debian.org wheezy-updates/main amd64 Packages/DiffIndex
+Hit http://ftp.us.debian.org wheezy-updates/main Translation-en/DiffIndex
+Hit https://deb.nodesource.com wheezy Release.gpg
+Hit https://deb.nodesource.com wheezy Release
+Hit https://deb.nodesource.com wheezy/main Sources
+Hit https://deb.nodesource.com wheezy/main amd64 Packages
+Ign http://downloads-distro.mongodb.org dist/10gen Translation-en_US
+Ign http://downloads-distro.mongodb.org dist/10gen Translation-en
+##################
+# Add needed key #
+##################
+deb http://downloads-distro.mongodb.org/repo/debian-sysvinit dist 10gen
+Reading package lists...
+Building dependency tree...
+Reading state information...
+git is already the newest version.
+0 upgraded, 0 newly installed, 0 to remove and 4 not upgraded.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+mongodb-org is already the newest version.
+0 upgraded, 0 newly installed, 0 to remove and 4 not upgraded.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+curl is already the newest version.
+0 upgraded, 0 newly installed, 0 to remove and 4 not upgraded.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+python-dev is already the newest version.
+0 upgraded, 0 newly installed, 0 to remove and 4 not upgraded.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+libxml2-dev is already the newest version.
+0 upgraded, 0 newly installed, 0 to remove and 4 not upgraded.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following NEW packages will be installed:
+  libxslt1-dev
+0 upgraded, 1 newly installed, 0 to remove and 4 not upgraded.
+Need to get 681 kB of archives.
+After this operation, 2,421 kB of additional disk space will be used.
+Get:1 http://ftp.us.debian.org/debian/ wheezy/main libxslt1-dev amd64 1.1.26-14.1 [681 kB]
+Fetched 681 kB in 0s (1,091 kB/s)
+Selecting previously unselected package libxslt1-dev.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 149838 files and directories currently installed.)
+Unpacking libxslt1-dev (from .../libxslt1-dev_1.1.26-14.1_amd64.deb) ...
+Processing triggers for man-db ...
+Setting up libxslt1-dev (1.1.26-14.1) ...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+vim is already the newest version.
+0 upgraded, 0 newly installed, 0 to remove and 4 not upgraded.
+
+## Confirming "wheezy" is supported...
+
++ curl -sLf -o /dev/null 'https://deb.nodesource.com/node/dists/wheezy/Release'
+
+## Adding the NodeSource signing key to your keyring...
+
++ curl -s https://deb.nodesource.com/gpgkey/nodesource.gpg.key | apt-key add -
+OK
+
+## Creating apt sources list file for the NodeSource repo...
+
++ echo 'deb https://deb.nodesource.com/node wheezy main' > /etc/apt/sources.list.d/nodesource.list
++ echo 'deb-src https://deb.nodesource.com/node wheezy main' >> /etc/apt/sources.list.d/nodesource.list
+
+## Running `apt-get update` for you...
+
++ apt-get update
+Error executing command, exiting
+Reading package lists...
+Building dependency tree...
+Reading state information...
+python-pip is already the newest version.
+openjdk-7-jre-headless is already the newest version.
+nodejs is already the newest version.
+0 upgraded, 0 newly installed, 0 to remove and 4 not upgraded.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+tomcat7 is already the newest version.
+tomcat7-admin is already the newest version.
+0 upgraded, 0 newly installed, 0 to remove and 4 not upgraded.
+#########################
+#        Back up        #
+#    Tomcat-users.xml   #
+#########################
+
+#########################
+#      Copy Basic       #
+#   Tomcat Users File   #
+#########################
+
+##################
+# Add needed key #
+##################
+deb http://downloads-distro.mongodb.org/repo/debian-sysvinit dist 10gen
+Reading package lists...
+Building dependency tree...
+Reading state information...
+git is already the newest version.
+0 upgraded, 0 newly installed, 0 to remove and 4 not upgraded.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+mongodb-org is already the newest version.
+0 upgraded, 0 newly installed, 0 to remove and 4 not upgraded.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+curl is already the newest version.
+0 upgraded, 0 newly installed, 0 to remove and 4 not upgraded.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+python-dev is already the newest version.
+0 upgraded, 0 newly installed, 0 to remove and 4 not upgraded.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+libxml2-dev is already the newest version.
+0 upgraded, 0 newly installed, 0 to remove and 4 not upgraded.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+libxslt1-dev is already the newest version.
+0 upgraded, 0 newly installed, 0 to remove and 4 not upgraded.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+vim is already the newest version.
+0 upgraded, 0 newly installed, 0 to remove and 4 not upgraded.
+
+## Confirming "wheezy" is supported...
+
++ curl -sLf -o /dev/null 'https://deb.nodesource.com/node/dists/wheezy/Release'
+
+## Adding the NodeSource signing key to your keyring...
+
++ curl -s https://deb.nodesource.com/gpgkey/nodesource.gpg.key | apt-key add -
+OK
+
+## Creating apt sources list file for the NodeSource repo...
+
++ echo 'deb https://deb.nodesource.com/node wheezy main' > /etc/apt/sources.list.d/nodesource.list
++ echo 'deb-src https://deb.nodesource.com/node wheezy main' >> /etc/apt/sources.list.d/nodesource.list
+
+## Running `apt-get update` for you...
+
++ apt-get update
+Hit http://downloads-distro.mongodb.org dist Release.gpg
+Hit http://ftp.us.debian.org wheezy Release.gpg
+Hit http://ftp.us.debian.org wheezy-updates Release.gpg
+Hit http://downloads-distro.mongodb.org dist Release
+Hit http://ftp.us.debian.org wheezy Release
+Hit http://ftp.us.debian.org wheezy-updates Release
+Hit http://downloads-distro.mongodb.org dist/10gen amd64 Packages
+Hit http://security.debian.org wheezy/updates Release.gpg
+Hit http://ftp.us.debian.org wheezy/main Sources
+Hit http://ftp.us.debian.org wheezy/main amd64 Packages
+Hit http://ftp.us.debian.org wheezy/main Translation-en
+Hit http://security.debian.org wheezy/updates Release
+Hit http://ftp.us.debian.org wheezy-updates/main Sources
+Get:1 http://ftp.us.debian.org wheezy-updates/main amd64 Packages/DiffIndex [1,471 B]
+Get:2 http://ftp.us.debian.org wheezy-updates/main Translation-en/DiffIndex [919 B]
+Hit http://security.debian.org wheezy/updates/main Sources
+Hit https://deb.nodesource.com wheezy Release.gpg
+Hit http://security.debian.org wheezy/updates/main amd64 Packages
+Hit https://deb.nodesource.com wheezy Release
+Hit https://deb.nodesource.com wheezy/main Sources
+Hit http://security.debian.org wheezy/updates/main Translation-en
+Hit https://deb.nodesource.com wheezy/main amd64 Packages
+Ign http://downloads-distro.mongodb.org dist/10gen Translation-en_US
+Ign http://downloads-distro.mongodb.org dist/10gen Translation-en
+Ign https://deb.nodesource.com wheezy/main Translation-en_US
+Ign https://deb.nodesource.com wheezy/main Translation-en
+Fetched 2,390 B in 3s (691 B/s)
+Reading package lists...
+
+## Run `apt-get install nodejs` (as root) to install Node.js and npm
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+python-pip is already the newest version.
+openjdk-7-jre-headless is already the newest version.
+nodejs is already the newest version.
+0 upgraded, 0 newly installed, 0 to remove and 4 not upgraded.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+tomcat7 is already the newest version.
+tomcat7-admin is already the newest version.
+0 upgraded, 0 newly installed, 0 to remove and 4 not upgraded.
+#########################
+#        Back up        #
+#    Tomcat-users.xml   #
+#########################
+
+#########################
+#      Copy Basic       #
+#   Tomcat Users File   #
+#########################
+
+#########################
+# Copy libraries needed #
+#########################
+
+#########################
+#     Copy solr.war     #
+#########################
+
+#########################
+#     Copy support      #
+#        files          #
+#########################
+
+#########################
+#      Install lxml     #
+#########################
+
+Downloading/unpacking lxml
+  Running setup.py egg_info for package lxml
+    /usr/lib/python2.7/distutils/dist.py:267: UserWarning: Unknown distribution option: 'bugtrack_url'
+      warnings.warn(msg)
+    Building lxml version 3.3.6.
+    Building without Cython.
+    Using build configuration of libxslt 1.1.26
+    Building against libxml2/libxslt in the following directory: /usr/lib
+    
+    warning: no previously-included files found matching '*.py'
+Installing collected packages: lxml
+  Running setup.py install for lxml
+    /usr/lib/python2.7/distutils/dist.py:267: UserWarning: Unknown distribution option: 'bugtrack_url'
+      warnings.warn(msg)
+    Building lxml version 3.3.6.
+    Building without Cython.
+    Using build configuration of libxslt 1.1.26
+    Building against libxml2/libxslt in the following directory: /usr/lib
+    building 'lxml.etree' extension
+    gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC -I/usr/include/libxml2 -I/realTime/build/lxml/src/lxml/includes -I/usr/include/python2.7 -c src/lxml/lxml.etree.c -o build/temp.linux-x86_64-2.7/src/lxml/lxml.etree.o -w
+    gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-z,relro build/temp.linux-x86_64-2.7/src/lxml/lxml.etree.o -lxslt -lexslt -lxml2 -lz -lm -o build/lib.linux-x86_64-2.7/lxml/etree.so
+    building 'lxml.objectify' extension
+    gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC -I/usr/include/libxml2 -I/realTime/build/lxml/src/lxml/includes -I/usr/include/python2.7 -c src/lxml/lxml.objectify.c -o build/temp.linux-x86_64-2.7/src/lxml/lxml.objectify.o -w
+    gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-z,relro build/temp.linux-x86_64-2.7/src/lxml/lxml.objectify.o -lxslt -lexslt -lxml2 -lz -lm -o build/lib.linux-x86_64-2.7/lxml/objectify.so
+    
+Successfully installed lxml
+Cleaning up...
+
+Stopping Tomcat servlet engine: tomcat7.
+Starting Tomcat servlet engine: tomcat7.
+Cloning into 'mongo-connector'...
+running install
+Checking .pth file support in /usr/local/lib/python2.7/dist-packages/
+/usr/bin/python -E -c pass
+TEST PASSED: /usr/local/lib/python2.7/dist-packages/ appears to support .pth files
+running bdist_egg
+running egg_info
+creating mongo_connector.egg-info
+writing requirements to mongo_connector.egg-info/requires.txt
+writing mongo_connector.egg-info/PKG-INFO
+writing top-level names to mongo_connector.egg-info/top_level.txt
+writing dependency_links to mongo_connector.egg-info/dependency_links.txt
+writing entry points to mongo_connector.egg-info/entry_points.txt
+writing manifest file 'mongo_connector.egg-info/SOURCES.txt'
+reading manifest file 'mongo_connector.egg-info/SOURCES.txt'
+writing manifest file 'mongo_connector.egg-info/SOURCES.txt'
+installing library code to build/bdist.linux-x86_64/egg
+running install_lib
+running build_py
+creating build
+creating build/lib.linux-x86_64-2.7
+creating build/lib.linux-x86_64-2.7/mongo_connector
+copying mongo_connector/locking_dict.py -> build/lib.linux-x86_64-2.7/mongo_connector
+copying mongo_connector/compat.py -> build/lib.linux-x86_64-2.7/mongo_connector
+copying mongo_connector/errors.py -> build/lib.linux-x86_64-2.7/mongo_connector
+copying mongo_connector/__init__.py -> build/lib.linux-x86_64-2.7/mongo_connector
+copying mongo_connector/connector.py -> build/lib.linux-x86_64-2.7/mongo_connector
+copying mongo_connector/constants.py -> build/lib.linux-x86_64-2.7/mongo_connector
+copying mongo_connector/oplog_manager.py -> build/lib.linux-x86_64-2.7/mongo_connector
+copying mongo_connector/util.py -> build/lib.linux-x86_64-2.7/mongo_connector
+creating build/lib.linux-x86_64-2.7/mongo_connector/doc_managers
+copying mongo_connector/doc_managers/doc_manager_simulator.py -> build/lib.linux-x86_64-2.7/mongo_connector/doc_managers
+copying mongo_connector/doc_managers/formatters.py -> build/lib.linux-x86_64-2.7/mongo_connector/doc_managers
+copying mongo_connector/doc_managers/solr_doc_manager.py -> build/lib.linux-x86_64-2.7/mongo_connector/doc_managers
+copying mongo_connector/doc_managers/mongo_doc_manager.py -> build/lib.linux-x86_64-2.7/mongo_connector/doc_managers
+copying mongo_connector/doc_managers/__init__.py -> build/lib.linux-x86_64-2.7/mongo_connector/doc_managers
+copying mongo_connector/doc_managers/elastic_doc_manager.py -> build/lib.linux-x86_64-2.7/mongo_connector/doc_managers
+copying mongo_connector/doc_managers/schema.xml -> build/lib.linux-x86_64-2.7/mongo_connector/doc_managers
+creating build/bdist.linux-x86_64
+creating build/bdist.linux-x86_64/egg
+creating build/bdist.linux-x86_64/egg/mongo_connector
+copying build/lib.linux-x86_64-2.7/mongo_connector/locking_dict.py -> build/bdist.linux-x86_64/egg/mongo_connector
+creating build/bdist.linux-x86_64/egg/mongo_connector/doc_managers
+copying build/lib.linux-x86_64-2.7/mongo_connector/doc_managers/doc_manager_simulator.py -> build/bdist.linux-x86_64/egg/mongo_connector/doc_managers
+copying build/lib.linux-x86_64-2.7/mongo_connector/doc_managers/formatters.py -> build/bdist.linux-x86_64/egg/mongo_connector/doc_managers
+copying build/lib.linux-x86_64-2.7/mongo_connector/doc_managers/solr_doc_manager.py -> build/bdist.linux-x86_64/egg/mongo_connector/doc_managers
+copying build/lib.linux-x86_64-2.7/mongo_connector/doc_managers/schema.xml -> build/bdist.linux-x86_64/egg/mongo_connector/doc_managers
+copying build/lib.linux-x86_64-2.7/mongo_connector/doc_managers/mongo_doc_manager.py -> build/bdist.linux-x86_64/egg/mongo_connector/doc_managers
+copying build/lib.linux-x86_64-2.7/mongo_connector/doc_managers/__init__.py -> build/bdist.linux-x86_64/egg/mongo_connector/doc_managers
+copying build/lib.linux-x86_64-2.7/mongo_connector/doc_managers/elastic_doc_manager.py -> build/bdist.linux-x86_64/egg/mongo_connector/doc_managers
+copying build/lib.linux-x86_64-2.7/mongo_connector/compat.py -> build/bdist.linux-x86_64/egg/mongo_connector
+copying build/lib.linux-x86_64-2.7/mongo_connector/errors.py -> build/bdist.linux-x86_64/egg/mongo_connector
+copying build/lib.linux-x86_64-2.7/mongo_connector/__init__.py -> build/bdist.linux-x86_64/egg/mongo_connector
+copying build/lib.linux-x86_64-2.7/mongo_connector/connector.py -> build/bdist.linux-x86_64/egg/mongo_connector
+copying build/lib.linux-x86_64-2.7/mongo_connector/constants.py -> build/bdist.linux-x86_64/egg/mongo_connector
+copying build/lib.linux-x86_64-2.7/mongo_connector/oplog_manager.py -> build/bdist.linux-x86_64/egg/mongo_connector
+copying build/lib.linux-x86_64-2.7/mongo_connector/util.py -> build/bdist.linux-x86_64/egg/mongo_connector
+byte-compiling build/bdist.linux-x86_64/egg/mongo_connector/locking_dict.py to locking_dict.pyc
+byte-compiling build/bdist.linux-x86_64/egg/mongo_connector/doc_managers/doc_manager_simulator.py to doc_manager_simulator.pyc
+byte-compiling build/bdist.linux-x86_64/egg/mongo_connector/doc_managers/formatters.py to formatters.pyc
+byte-compiling build/bdist.linux-x86_64/egg/mongo_connector/doc_managers/solr_doc_manager.py to solr_doc_manager.pyc
+byte-compiling build/bdist.linux-x86_64/egg/mongo_connector/doc_managers/mongo_doc_manager.py to mongo_doc_manager.pyc
+byte-compiling build/bdist.linux-x86_64/egg/mongo_connector/doc_managers/__init__.py to __init__.pyc
+byte-compiling build/bdist.linux-x86_64/egg/mongo_connector/doc_managers/elastic_doc_manager.py to elastic_doc_manager.pyc
+byte-compiling build/bdist.linux-x86_64/egg/mongo_connector/compat.py to compat.pyc
+byte-compiling build/bdist.linux-x86_64/egg/mongo_connector/errors.py to errors.pyc
+byte-compiling build/bdist.linux-x86_64/egg/mongo_connector/__init__.py to __init__.pyc
+byte-compiling build/bdist.linux-x86_64/egg/mongo_connector/connector.py to connector.pyc
+byte-compiling build/bdist.linux-x86_64/egg/mongo_connector/constants.py to constants.pyc
+byte-compiling build/bdist.linux-x86_64/egg/mongo_connector/oplog_manager.py to oplog_manager.pyc
+byte-compiling build/bdist.linux-x86_64/egg/mongo_connector/util.py to util.pyc
+creating build/bdist.linux-x86_64/egg/EGG-INFO
+copying mongo_connector.egg-info/PKG-INFO -> build/bdist.linux-x86_64/egg/EGG-INFO
+copying mongo_connector.egg-info/SOURCES.txt -> build/bdist.linux-x86_64/egg/EGG-INFO
+copying mongo_connector.egg-info/dependency_links.txt -> build/bdist.linux-x86_64/egg/EGG-INFO
+copying mongo_connector.egg-info/entry_points.txt -> build/bdist.linux-x86_64/egg/EGG-INFO
+copying mongo_connector.egg-info/requires.txt -> build/bdist.linux-x86_64/egg/EGG-INFO
+copying mongo_connector.egg-info/top_level.txt -> build/bdist.linux-x86_64/egg/EGG-INFO
+creating dist
+creating 'dist/mongo_connector-1.3.dev0-py2.7.egg' and adding 'build/bdist.linux-x86_64/egg' to it
+removing 'build/bdist.linux-x86_64/egg' (and everything under it)
+Processing mongo_connector-1.3.dev0-py2.7.egg
+removing '/usr/local/lib/python2.7/dist-packages/mongo_connector-1.3.dev0-py2.7.egg' (and everything under it)
+creating /usr/local/lib/python2.7/dist-packages/mongo_connector-1.3.dev0-py2.7.egg
+Extracting mongo_connector-1.3.dev0-py2.7.egg to /usr/local/lib/python2.7/dist-packages
+mongo-connector 1.3.dev0 is already the active version in easy-install.pth
+Installing mongo-connector script to /usr/local/bin
+
+Installed /usr/local/lib/python2.7/dist-packages/mongo_connector-1.3.dev0-py2.7.egg
+Processing dependencies for mongo-connector==1.3.dev0
+Searching for elasticsearch==1.2.0
+Best match: elasticsearch 1.2.0
+Processing elasticsearch-1.2.0-py2.7.egg
+elasticsearch 1.2.0 is already the active version in easy-install.pth
+
+Using /usr/local/lib/python2.7/dist-packages/elasticsearch-1.2.0-py2.7.egg
+Searching for pysolr==3.2.0
+Best match: pysolr 3.2.0
+Processing pysolr-3.2.0-py2.7.egg
+pysolr 3.2.0 is already the active version in easy-install.pth
+
+Using /usr/local/lib/python2.7/dist-packages/pysolr-3.2.0-py2.7.egg
+Searching for pymongo==2.7.2
+Best match: pymongo 2.7.2
+Processing pymongo-2.7.2-py2.7-linux-x86_64.egg
+pymongo 2.7.2 is already the active version in easy-install.pth
+
+Using /usr/local/lib/python2.7/dist-packages/pymongo-2.7.2-py2.7-linux-x86_64.egg
+Searching for urllib3==1.9
+Best match: urllib3 1.9
+Processing urllib3-1.9-py2.7.egg
+urllib3 1.9 is already the active version in easy-install.pth
+
+Using /usr/local/lib/python2.7/dist-packages/urllib3-1.9-py2.7.egg
+Searching for requests==2.4.0
+Best match: requests 2.4.0
+Processing requests-2.4.0-py2.7.egg
+requests 2.4.0 is already the active version in easy-install.pth
+
+Using /usr/local/lib/python2.7/dist-packages/requests-2.4.0-py2.7.egg
+Searching for certifi==14.05.14
+Best match: certifi 14.05.14
+Processing certifi-14.05.14-py2.7.egg
+certifi 14.05.14 is already the active version in easy-install.pth
+
+Using /usr/local/lib/python2.7/dist-packages/certifi-14.05.14-py2.7.egg
+Finished processing dependencies for mongo-connector==1.3.dev0
+#########################
+#      Cleaning up      #
+#########################
+express@4.8.7 /usr/lib/node_modules/express
+├── merge-descriptors@0.0.2
+├── utils-merge@1.0.0
+├── cookie@0.1.2
+├── escape-html@1.0.1
+├── cookie-signature@1.0.4
+├── finalhandler@0.1.0
+├── range-parser@1.0.0
+├── fresh@0.2.2
+├── vary@0.1.0
+├── media-typer@0.2.0
+├── methods@1.1.0
+├── parseurl@1.3.0
+├── serve-static@1.5.3
+├── buffer-crc32@0.2.3
+├── depd@0.4.4
+├── path-to-regexp@0.1.3
+├── qs@2.2.2
+├── debug@1.0.4 (ms@0.6.2)
+├── proxy-addr@1.0.1 (ipaddr.js@0.1.2)
+├── accepts@1.0.7 (negotiator@0.4.7, mime-types@1.0.2)
+├── send@0.8.3 (destroy@1.0.3, ms@0.6.2, mime@1.2.11, on-finished@2.1.0)
+└── type-is@1.3.2 (mime-types@1.0.2)
+/usr/bin/express -> /usr/lib/node_modules/express-generator/bin/express
+express-generator@4.8.0 /usr/lib/node_modules/express-generator
+├── commander@1.3.2 (keypress@0.1.0)
+└── mkdirp@0.5.0 (minimist@0.0.8)
+Requirement already satisfied (use --upgrade to upgrade): cssselect in /usr/local/lib/python2.7/dist-packages
+Cleaning up...
+########################
+#   Copying updated    #
+#    pysolr.py file    #
+########################
